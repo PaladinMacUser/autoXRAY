@@ -162,7 +162,7 @@ cat << 'EOF' | envsubst > "$SCRIPT_DIR/config.json"
 
   # Мои правки Пользователь 2
  {
-            "tag": "Vless user 1",
+            "tag": "Vless user 2",
             "listen": "0.0.0.0",
             "port": 443,
             "protocol": "vless",
@@ -204,7 +204,7 @@ cat << 'EOF' | envsubst > "$SCRIPT_DIR/config.json"
  # Конец правок
   # Мои правки Пользователь 3
  {
-            "tag": "Vless user 1",
+            "tag": "Vless user 3",
             "listen": "0.0.0.0",
             "port": 443,
             "protocol": "vless",
@@ -246,7 +246,7 @@ cat << 'EOF' | envsubst > "$SCRIPT_DIR/config.json"
  # Конец правок
   # Мои правки Пользователь 4
  {
-            "tag": "Vless user 1",
+            "tag": "Vless user 4",
             "listen": "0.0.0.0",
             "port": 443,
             "protocol": "vless",
@@ -288,7 +288,7 @@ cat << 'EOF' | envsubst > "$SCRIPT_DIR/config.json"
  # Конец правок
   # Мои правки Пользователь 5
  {
-            "tag": "Vless user 1",
+            "tag": "Vless user 5",
             "listen": "0.0.0.0",
             "port": 443,
             "protocol": "vless",
@@ -426,6 +426,18 @@ message="<b>VPN конфиги:</b>
  
 3) <code>$link3</code>
 
+4) <code>$link4</code>
+ 
+5) <code>$link5</code>
+ 
+6) <code>$link6</code>
+
+7) <code>$link7</code>
+ 
+8) <code>$link8</code>
+
+
+
 №1 - самый надежный, остальные резервные!
 
 Клиентские приложения для работы VPN (куда нужно вставить конфиг):
@@ -451,6 +463,11 @@ fi
 
 # Формирование ссылок для вывода
 link1="vless://${xray_uuid_vrv}@${ipserv}:443?security=reality&sni=${xray_dest_vrv}&fp=chrome&pbk=${xray_publicKey_vrv}&sid=${xray_shortIds_vrv}&type=tcp&flow=xtls-rprx-vision&encryption=none#VPN-vless-443"
+link4="vless://${xray_uuid_vrv}@${ipserv}:443?security=reality&sni=${xray_dest_vrv1}&fp=chrome&pbk=${xray_publicKey_vrv}&sid=${xray_shortIds_vrv}&type=tcp&flow=xtls-rprx-vision&encryption=none#VPN-vless-443"
+link5="vless://${xray_uuid_vrv}@${ipserv}:443?security=reality&sni=${xray_dest_vrv2}&fp=chrome&pbk=${xray_publicKey_vrv}&sid=${xray_shortIds_vrv}&type=tcp&flow=xtls-rprx-vision&encryption=none#VPN-vless-443"
+link6="vless://${xray_uuid_vrv}@${ipserv}:443?security=reality&sni=${xray_dest_vrv3}&fp=chrome&pbk=${xray_publicKey_vrv}&sid=${xray_shortIds_vrv}&type=tcp&flow=xtls-rprx-vision&encryption=none#VPN-vless-443"
+link7="vless://${xray_uuid_vrv}@${ipserv}:443?security=reality&sni=${xray_dest_vrv4}&fp=chrome&pbk=${xray_publicKey_vrv}&sid=${xray_shortIds_vrv}&type=tcp&flow=xtls-rprx-vision&encryption=none#VPN-vless-443"
+link8="vless://${xray_uuid_vrv}@${ipserv}:443?security=reality&sni=${xray_dest_vrv5}&fp=chrome&pbk=${xray_publicKey_vrv}&sid=${xray_shortIds_vrv}&type=tcp&flow=xtls-rprx-vision&encryption=none#VPN-vless-443"
 
 link2="vless://${xray_uuid_vrv}@${ipserv}:8443?security=reality&sni=${xray_dest_vrv222}&fp=chrome&pbk=${xray_publicKey_vrv}&sid=${xray_shortIds_vrv}&type=tcp&flow=xtls-rprx-vision&encryption=none#VPN-vless-8443"
 
@@ -466,7 +483,16 @@ echo -e "
 echo -e "\033[32m$link2\033[0m
 "
 echo -e "\033[32m$link3\033[0m
-
+"
+echo -e "\033[32m$link4\033[0m
+"
+echo -e "\033[32m$link5\033[0m
+"
+echo -e "\033[32m$link6\033[0m
+"
+echo -e "\033[32m$link7\033[0m
+"
+echo -e "\033[32m$link8\033[0m
 Скопируйте конфиг в специализированное приложение:
 - iOS: Happ или v2rayTun или FoXray
 - Android: Happ или v2rayTun или v2rayNG
