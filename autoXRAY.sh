@@ -121,7 +121,7 @@ cat << 'EOF' | envsubst > "$SCRIPT_DIR/config.json"
  {
             "tag": "Vless user 1",
             "listen": "0.0.0.0",
-            "port": 8443,
+            "port": 443,
             "protocol": "vless",
             "settings": {
                 "clients": [
@@ -137,7 +137,7 @@ cat << 'EOF' | envsubst > "$SCRIPT_DIR/config.json"
                 "security": "reality",
                 "realitySettings": {
                     "show": false,
-                    "target": "${xray_dest_vrv222}:443",
+                    "target": "${xray_dest_vrv1}:443",
                     "xver": 0,
                     "serverNames": [
                         "${xray_dest_vrv222}"
