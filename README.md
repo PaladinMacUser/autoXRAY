@@ -1,3 +1,6 @@
+
+bash -c "$(curl -L https://raw.githubusercontent.com/PaladinMacUser/autoXRAY/main/autoXRAY.sh)"
+
 # autoXRAY - личный ВПН сервер
 Bash-скрипт для автоматической настройки ядра [Xray](https://github.com/XTLS/Xray-core). Предназначен для быстрого и удобного получения актуальных конфигураций ВПН для семейного/личного использования.
 
