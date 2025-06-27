@@ -19,6 +19,11 @@ SCRIPT_DIR=/usr/local/etc/xray
 xray_uuid_vrv=$(xray uuid)
 domains=(www.theregister.com www.20minutes.fr www.dealabs.com www.manomano.fr www.caradisiac.com www.techadvisor.com www.computerworld.com teamdocs.su wikiportal.su docscenter.su www.bing.com github.com tradingview.com)
 xray_dest_vrv=${domains[$RANDOM % ${#domains[@]}]}
+xray_dest_vrv1=${domains[$RANDOM % ${#domains[@]}]}
+xray_dest_vrv2=${domains[$RANDOM % ${#domains[@]}]}
+xray_dest_vrv3=${domains[$RANDOM % ${#domains[@]}]}
+xray_dest_vrv4=${domains[$RANDOM % ${#domains[@]}]}
+xray_dest_vrv5=${domains[$RANDOM % ${#domains[@]}]}
 xray_dest_vrv222=${domains[$RANDOM % ${#domains[@]}]}
 
 key_output=$(xray x25519)
@@ -34,7 +39,7 @@ ipserv=$(hostname -I | awk '{print $1}')
 
 
 # Экспортируем переменные для envsubst
-export xray_uuid_vrv xray_dest_vrv xray_dest_vrv222 xray_privateKey_vrv xray_publicKey_vrv xray_shortIds_vrv xray_sspasw_vrv
+export xray_uuid_vrv xray_dest_vrv xray_dest_vrv1 xray_dest_vrv2 xray_dest_vrv3 xray_dest_vrv4 xray_dest_vrv5 xray_dest_vrv222 xray_privateKey_vrv xray_publicKey_vrv xray_shortIds_vrv xray_sspasw_vrv
 
 # Создаем JSON конфигурацию на основе шаблона
 #cat << 'EOF' | envsubst > output.json
@@ -111,6 +116,49 @@ cat << 'EOF' | envsubst > "$SCRIPT_DIR/config.json"
                 ]
             }
         },
+
+ # Мои правки
+ {
+            "tag": "Vless user 1",
+            "listen": "0.0.0.0",
+            "port": 8443,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "flow": "xtls-rprx-vision",
+                        "id": "${xray_uuid_vrv}"
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "reality",
+                "realitySettings": {
+                    "show": false,
+                    "target": "${xray_dest_vrv222}:443",
+                    "xver": 0,
+                    "serverNames": [
+                        "${xray_dest_vrv222}"
+                    ],
+                    "privateKey": "${xray_privateKey_vrv}",
+                    "publicKey": "${xray_publicKey_vrv}",
+                    "shortIds": [
+                        "${xray_shortIds_vrv}"
+                    ]
+                }
+            },
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ]
+            }
+        },
+ # Конец правок
         {
             "tag": "Vless8443",
             "listen": "0.0.0.0",
