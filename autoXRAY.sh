@@ -119,7 +119,7 @@ cat << 'EOF' | envsubst > "$SCRIPT_DIR/config.json"
 
  # Мои правки Пользователь 1
  {
-            "tag": "Vless user 1",
+            "tag": "VlessUser1",
             "listen": "0.0.0.0",
             "port": 443,
             "protocol": "vless",
@@ -162,7 +162,7 @@ cat << 'EOF' | envsubst > "$SCRIPT_DIR/config.json"
 
   # Мои правки Пользователь 2
  {
-            "tag": "Vless user 2",
+            "tag": "VlessUser2",
             "listen": "0.0.0.0",
             "port": 443,
             "protocol": "vless",
@@ -204,7 +204,7 @@ cat << 'EOF' | envsubst > "$SCRIPT_DIR/config.json"
  # Конец правок
   # Мои правки Пользователь 3
  {
-            "tag": "Vless user 3",
+            "tag": "VlessUser3",
             "listen": "0.0.0.0",
             "port": 443,
             "protocol": "vless",
@@ -246,7 +246,7 @@ cat << 'EOF' | envsubst > "$SCRIPT_DIR/config.json"
  # Конец правок
   # Мои правки Пользователь 4
  {
-            "tag": "Vless user 4",
+            "tag": "VlessUser4",
             "listen": "0.0.0.0",
             "port": 443,
             "protocol": "vless",
@@ -288,7 +288,7 @@ cat << 'EOF' | envsubst > "$SCRIPT_DIR/config.json"
  # Конец правок
   # Мои правки Пользователь 5
  {
-            "tag": "Vless user 5",
+            "tag": "VlessUser5",
             "listen": "0.0.0.0",
             "port": 443,
             "protocol": "vless",
