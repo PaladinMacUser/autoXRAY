@@ -117,7 +117,7 @@ cat << 'EOF' | envsubst > "$SCRIPT_DIR/config.json"
             }
         },
 
- # Мои правки
+ # Мои правки Пользователь 1
  {
             "tag": "Vless user 1",
             "listen": "0.0.0.0",
@@ -140,7 +140,176 @@ cat << 'EOF' | envsubst > "$SCRIPT_DIR/config.json"
                     "target": "${xray_dest_vrv1}:443",
                     "xver": 0,
                     "serverNames": [
-                        "${xray_dest_vrv222}"
+                        "${xray_dest_vrv1}"
+                    ],
+                    "privateKey": "${xray_privateKey_vrv}",
+                    "publicKey": "${xray_publicKey_vrv}",
+                    "shortIds": [
+                        "${xray_shortIds_vrv}"
+                    ]
+                }
+            },
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ]
+            }
+        },
+ # Конец правок
+
+  # Мои правки Пользователь 2
+ {
+            "tag": "Vless user 1",
+            "listen": "0.0.0.0",
+            "port": 443,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "flow": "xtls-rprx-vision",
+                        "id": "${xray_uuid_vrv}"
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "reality",
+                "realitySettings": {
+                    "show": false,
+                    "target": "${xray_dest_vrv2}:443",
+                    "xver": 0,
+                    "serverNames": [
+                        "${xray_dest_vrv2}"
+                    ],
+                    "privateKey": "${xray_privateKey_vrv}",
+                    "publicKey": "${xray_publicKey_vrv}",
+                    "shortIds": [
+                        "${xray_shortIds_vrv}"
+                    ]
+                }
+            },
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ]
+            }
+        },
+ # Конец правок
+  # Мои правки Пользователь 3
+ {
+            "tag": "Vless user 1",
+            "listen": "0.0.0.0",
+            "port": 443,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "flow": "xtls-rprx-vision",
+                        "id": "${xray_uuid_vrv}"
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "reality",
+                "realitySettings": {
+                    "show": false,
+                    "target": "${xray_dest_vrv3}:443",
+                    "xver": 0,
+                    "serverNames": [
+                        "${xray_dest_vrv3}"
+                    ],
+                    "privateKey": "${xray_privateKey_vrv}",
+                    "publicKey": "${xray_publicKey_vrv}",
+                    "shortIds": [
+                        "${xray_shortIds_vrv}"
+                    ]
+                }
+            },
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ]
+            }
+        },
+ # Конец правок
+  # Мои правки Пользователь 4
+ {
+            "tag": "Vless user 1",
+            "listen": "0.0.0.0",
+            "port": 443,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "flow": "xtls-rprx-vision",
+                        "id": "${xray_uuid_vrv}"
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "reality",
+                "realitySettings": {
+                    "show": false,
+                    "target": "${xray_dest_vrv4}:443",
+                    "xver": 0,
+                    "serverNames": [
+                        "${xray_dest_vrv4}"
+                    ],
+                    "privateKey": "${xray_privateKey_vrv}",
+                    "publicKey": "${xray_publicKey_vrv}",
+                    "shortIds": [
+                        "${xray_shortIds_vrv}"
+                    ]
+                }
+            },
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ]
+            }
+        },
+ # Конец правок
+  # Мои правки Пользователь 5
+ {
+            "tag": "Vless user 1",
+            "listen": "0.0.0.0",
+            "port": 443,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "flow": "xtls-rprx-vision",
+                        "id": "${xray_uuid_vrv}"
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "reality",
+                "realitySettings": {
+                    "show": false,
+                    "target": "${xray_dest_vrv5}:443",
+                    "xver": 0,
+                    "serverNames": [
+                        "${xray_dest_vrv5}"
                     ],
                     "privateKey": "${xray_privateKey_vrv}",
                     "publicKey": "${xray_publicKey_vrv}",
